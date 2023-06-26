@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container align-content-center">
+            <div class="col-lg-6 mb-4" style="width: 100%;">
+        <h1 class="mt-4" style="color: #F8B500 !important;">Détails du chantier "{{ chantier.getNom() }}"</h1>
+
+        <div class="card mb-4 bg-yellow">
+            <div class="card-body">
+                <h5 class="card-title" style="color: #F8B500 !important;">Informations du chantier</h5>
+                <p class="card-text"><strong>Adresse :</strong> {{ chantier.getAdresse() }}</p>
+                <p class="card-text"><strong>Date de début :</strong> {{ chantier.getStartDate()|date('d/m/Y') }}</p>
+            </div>
+        </div>
+
+                    <div class="card shadow mb-4">
+            <div class="card-body">
+                <h5 class="card-title" style="color: #F8B500 !important;">Statistiques</h5>
+                <p class="card-text"><strong>Nombre de personnes différentes pointées :</strong> {{ users_count }}</p>
+                <p class="card-text"><strong>Nombre d'heures cumulées pointées :</strong> {{ hours_accumulate }}</p>
+            </div>
+        </div>
+            </div>
+
+        <a href="{{ path('app_chantier_list') }}" class="btn btn-secondary">Retour à la liste des chantiers</a>
+    </div>
+{% endblock %}

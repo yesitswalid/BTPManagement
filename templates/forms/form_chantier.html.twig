@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+    <section class="login-clean">
+        <div class="container">
+            <h2 class="visually-hidden">{{ title }}</h2>
+            <h1 class="text-center" style="color: white;">BTP Management</h1>
+            <div class="illustration" style="padding-bottom: 0px;"><i class="fas fa-snowplow fa-2x" style="color: #F8B500;font-size: 85px;"></i></div>
+            {% if form_errors(form) %}
+                <div class="alert alert-danger">
+                    {{ form_errors(form) }}
+                </div>
+            {% endif %}
+
+            {{ form_start(form, { 'attr': {'class': 'mt-4', 'style': 'max-width: 354px'} }) }}
+
+            <div class="mb-3">
+                {{ form_row(form.nom, {'attr': {'class': 'form-control', 'placeholder': 'Nom du chantier'}}) }}
+            </div>
+
+            <div class="mb-3">
+                {{ form_row(form.adresse, {'attr': {'class': 'form-control', 'placeholder': 'Adresse'}}) }}
+            </div>
+
+            <div class="mb-3">
+                {{ form_row(form.startDate, {'attr': {'class': 'form-control', 'placeholder': 'Date du chantier'}}) }}
+            </div>
+
+            <div class="mb-3">
+                <button class="btn btn-primary d-block w-100" type="submit" style="background: white; color: #F8B500; font-weight: bold;">{{ button|default('Enregistrer') }}</button>
+                <a href="{{ path("app_chantier_list") }}" class="btn btn-outline-primary d-block w-100" style="background: white; color: #F8B500; font-weight: bold; border-color: #f0f0f0"><i class="fa fa-arrow-left"></i> Retour</a>
+            </div>
+
+            {{ form_end(form) }}
+        </div>
+    </section>
+{% endblock %}
