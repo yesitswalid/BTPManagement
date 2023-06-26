@@ -10,6 +10,8 @@ Avant d'installer le projet, assurez-vous d'avoir les éléments suivants sur vo
 
 Composer **([https://getcomposer.org](https://getcomposer.org))**
 
+Symfony CLI ([https://symfony.com/download](https://symfony.com/download))
+
 MySQL ou un autre système de gestion de base de données pris en charge par Symfony 4
 Installation 
 
@@ -33,14 +35,14 @@ Suivez ces étapes pour installer et exécuter le projet :
   ` DATABASE_URL=mysql://utilisateur:motdepasse@hote/nom_base_de_données`
 
 
-5. Créez la base de données en exécutant la commande suivante : `php bin/console doctrine:database:create`
+5. Créez la base de données en exécutant la commande suivante : `symfony console doctrine:database:create`
 
 
-6. Exécutez les migrations pour créer les tables de base de données : `php bin/console doctrine:migrations:migrate`
+6. Exécutez les migrations pour créer les tables de base de données : `symfony console doctrine:migrations:migrate`
 
 
 7. Lancez le serveur Symfony en utilisant la commande suivante :
-`php bin/console server:run`
+`symfony server:start`
 
 
 8. Accédez à l'application dans votre navigateur à l'adresse [http://localhost:8000](http://localhost:8000) (ou à l'adresse spécifiée par la commande server:run).
