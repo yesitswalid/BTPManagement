@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}BTPManagement - Accueil{% endblock %}
+
+{% block body%}
+    <div id="wrapper">
+        {{ include('navbar.html.twig') }}
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                </nav>
+                <div class="container-fluid">
+                    <div class="d-sm-flex justify-content-between align-items-center mb-4" style="color: #F8B500;">
+                        <h3 class="text-dark mb-0" style="color: #F8B500 !important;">BTPManagement | Accueil</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-start-success py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-success fw-bold text-xs mb-1"><span style="color: #F8B500;font-weight: bold;">Nombre de chantiers</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>{{ chantiers_count }}</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-snowplow fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-start-info py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-info fw-bold text-xs mb-1"><span style="color: #F8B500;font-weight: bold;">Nombre de pointages</span></div>
+                                            <div class="row g-0 align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="text-dark fw-bold h5 mb-0 me-3"><span>{{ pointages_count }}</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto"><i class="far fa-calendar fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-start-warning py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span>Nombre d'utilisateurs</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>{{ users_count }}</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-child fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span><br>Copyright © BTPManagement 2023<br></span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+{% endblock %}
