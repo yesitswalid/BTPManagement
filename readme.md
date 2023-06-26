@@ -33,12 +33,10 @@ Suivez ces étapes pour installer et exécuter le projet :
   ` DATABASE_URL=mysql://utilisateur:motdepasse@hote/nom_base_de_données`
 
 
-5. Créez la base de données en exécutant la commande suivante :
-`   php bin/console doctrine:database:create`
+5. Créez la base de données en exécutant la commande suivante : `php bin/console doctrine:database:create`
 
 
-6. Exécutez les migrations pour créer les tables de base de données :
-`   php bin/console doctrine:migrations:migrate`
+6. Exécutez les migrations pour créer les tables de base de données : `php bin/console doctrine:migrations:migrate`
 
 
 7. Lancez le serveur Symfony en utilisant la commande suivante :
