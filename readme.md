@@ -38,7 +38,7 @@ Suivez ces étapes pour installer et exécuter le projet :
 5. Créez la base de données en exécutant la commande suivante : `symfony console doctrine:database:create`
 
 
-6. Exécutez les migrations pour créer les tables de base de données : `symfony console doctrine:migrations:execute --up 'DoctrineMigrations\Version20230626093635'`
+6. Exécutez les migrations pour créer les tables de base de données : `symfony console doctrine:migrations:execute --up 'DoctrineMigrations\Version20230626094447'`
 
 
 7. Lancez le serveur Symfony en utilisant la commande suivante :
